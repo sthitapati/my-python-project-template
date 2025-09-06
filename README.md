@@ -1,4 +1,5 @@
 ## This is a customizable Python project template 
+Particularly to be used with VScode
 
 Instructions to set up your Python project:
 1. **Clone the Repository**: Start by cloning this repository to your local machine. I would just delete git, rename the folder and start fresh.
