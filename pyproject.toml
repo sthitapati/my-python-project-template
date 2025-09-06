@@ -1,0 +1,51 @@
+[project]
+name = "my-python-project-template"
+version = "0.1.0"
+description = "My customizable Python project template"
+authors = [
+    { name = "Sthitapranjya Pati", email = "sthita.pati@gmail.com" }
+]
+
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "scikit-learn",
+    "jupyterlab",
+    "seaborn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "ruff",
+    "mypy",
+    "pytest"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["lif_sim"]
+
+[tool.ruff]
+select = ["E", "F", "W"]
+line-length = 88
+target-version = "py39"
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+files = ["lif_sim/**/*.py"]
